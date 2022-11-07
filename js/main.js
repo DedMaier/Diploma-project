@@ -1,9 +1,33 @@
 /* variables */
 let citylist = ['Москва','Караганда', 'Магадан', 'Люберцы', 'Севастополь', 'Ярославль', 'Вологда', 'Владивосток', 'Барнаул', 'Петрозаводск', 'Самара', 'Саратов', 'Тверь', 'Вашингтон', 'Париж', 'Пермь', 'Екатеринбург', 'Новосибирск', 'Калининград'];
 let rangemin = 0;
-let rangemax = 300;
+let rangemax = 300000;
+let startbasket = [
+    {
+        id: 1,
+        name: 'Гидроцикл BRP SeeDoo Black',
+        price: 1049500,
+        quantity: 1,
+        link: ''
+    },
+    {
+        id: 2,
+        name: 'Гидроцикл BRP SeeDoo Blue',
+        price: 1100475,
+        quantity: 1,
+        link: ''
+    },
+    {
+        id: 111,
+        name: 'Гидроцикл BRP SeeDoo Green',
+        price: 1323700,
+        quantity: 1,
+        link: ''
+    }
+];
 
 /* functions */
+
 function getModalWindow(idname) {
     $('body').append('<div class="screener"></div><div class="modal" id="'+idname+'"><button type="button" class="close">&times;</button></div>');
     $('.screener, .modal .close').click(dropModalWindow);
@@ -27,7 +51,7 @@ function actiontimer() {
     delta = Math.floor(delta/60);
     let hours = delta % 24;
     let days = Math.floor(delta/24);
-    let helpstr = `${days} ${multiple(days, 'день', 'дня', 'дней')} ${addZero(hours)} ${multiple(hours, 'час', 'часа', 'часов')} ${addZero(minutes)} ${multiple(minutes, 'минута', 'минуты', 'минут')} ${addZero(seconds)} ${multiple(seconds, 'секунда', 'секунды', 'секунд')}`;
+    let helpstr = `<span>${days}</span> ${multiple(days, 'день', 'дня', 'дней')} <span>${addZero(hours)}</span> ${multiple(hours, 'час', 'часа', 'часов')} <span>${addZero(minutes)}</span> ${multiple(minutes, 'минута', 'минуты', 'минут')} <span>${addZero(seconds)}</span> ${multiple(seconds, 'секунда', 'секунды', 'секунд')}`;
     $('.actiontimer').html(helpstr);
     return res;
 }
@@ -47,9 +71,109 @@ function multiple(num, word1, word2, word3) {
         return word3;
     }
 }
+function orderReCount() {
+    let point = $('.table');
+    let allsum = 0;
+    point.find('tbody tr').each(function(){
+        let price = +$(this).find('.price').html();
+        let qty = +$(this).find('.qty strong').html();
+        let sum = qty * price;
+        allsum += sum;
+        $(this).find('.sum').html(sum);
+    });
+    point.find('.allsum span').html(allsum);
+}
+function changeOrder(line, num){
+    let newnum = +$(line).find('.qty strong').html() + num;
+    if (newnum > 0) {
+        $(line).find('.qty strong').html(newnum);
+        orderReCount();
+    }
+}
 
 /* on ready */
+
 $(function(){
+    $('.topmenu a').each(function(){
+        if (this.href == location.href.split('#')[0]) this.className = 'current';
+    });
+    
+    $('#city span').html(localStorage.getItem('city') || 'Москва');
+    
+    $('#city').click(function(){
+        getModalWindow('citymodal');
+        $('.modal').append('<h1>Выберите город:</h1><input type="text" id="citysearch" placeholder="Введите часть названия города..."><div class="columns"></div>');
+        for (let city of citylist) {
+            $('.modal .columns').append('<p>' + city + '</p>');
+        }
+        $('.modal p').click(function(){
+            let city = $(this).html()
+            $('#city span').html(city);
+            localStorage.setItem('city', city);
+            dropModalWindow();
+        });
+        $('#citysearch').on('input', function(){
+            let namepart = $('#citysearch').val().toLowerCase();
+            $('.modal p').each(function(){
+                if (!this.innerHTML.toLowerCase().includes(namepart)) {
+                    this.style.display = 'none';
+                } else {
+                    this.style.display = 'block';
+                }
+            });
+        });
+    });
+    
+    if ($('.action').length) {
+        actiontimer();
+        let timer0 = setInterval(function(){
+            if (!actiontimer()) clearInterval(timer0);
+        }, 1000);
+    }
+    
+    $('.slider').each(function(){
+        makeSlider(this.id, 4000);
+    });
+    
+    if ($('.catmenu li li').length) {
+        if ($('.catmenu.simple').length) { // если мы хотим простейший аккордеон без сложной анимации
+            $('.catmenu > ul > li').click(function(e){
+                if (e.target.tagName != 'A') {
+                    $('.open').removeClass('open'); // отнимаем класс open у ранее открытого вложенного списка
+                    $(this).find('ul').addClass('open'); // добавляем класс open вложенному списку в кликнутом пункте
+                }
+            });
+        } else { // если мы хотим аккордеон с более красивой анимацией
+            $('.catmenu li li').slideUp(1); // скрываем все пункты второго уровня
+            $('.catmenu > ul > li').click(function(e){ // ловим клик на пункте первого уровня
+                if ((e.target.tagName != 'A') && (!$(this).find('.open').length)) { // если клик не был по ссылке и вложенный список в этом пункте уже не раскрыт...
+                    let here = $(this).find('ul'); // сохраняем указатель на вложенный список в кликнутом пункте 
+                    if (here.length) { // если в кликнутом пункте есть вложенный список...
+                        if ($('.catmenu .open').length) { // если был раскрытый вложенный список...
+                            $('.catmenu .open li').slideUp(1000, function(){ // прячем его пункты
+                                $('.catmenu .open').removeClass('open'); // затем убираем с него класс open
+                                here.find('li').slideDown(1000, function(){ // затем открываем пункты списка по нашему указателю
+                                    here.addClass('open'); // и вешаем на него класс open
+                                });
+                            });
+                        } else { // если раскрытого вложенного списка не было...
+                            here.find('li').slideDown(1000, function(){ // открываем пункты списка по нашему указателю
+                                here.addClass('open'); // и вешаем на него класс open
+                            });
+                        }
+                    } else {
+                        if ($('.catmenu .open').length) { // если был раскрытый вложенный список...
+                            $('.catmenu .open li').slideUp(1000, function(){ // прячем его пункты
+                                $('.catmenu .open').removeClass('open'); // затем убираем с него класс open
+                            });
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+/*$(function(){
     $('#city').click(function(){
         getModalWindow('citymodal');
         $('.modal').append('<h5>Выберите город:</h5><input type="text" id="citysearch" placeholder="Введите название города..."><div class="columns"></div>');
@@ -119,21 +243,8 @@ $(function(){
                 }
             });
         }
-    }
+    }*/
     
-    // if ($('.querymenu').length) {
-        // $( "#acco" ).accordion({
-            // header: ".acco_h",
-            // icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus" }
-        // });
-        // $( "#toggle" ).button().on( "click", function() {
-            // if ( $( "#acco" ).accordion( "option", "icons" ) ) {
-                // $( "#acco" ).accordion( "option", "icons", null );
-            // } else {
-                // $( "#acco" ).accordion( "option", "icons", icons );
-            // }
-        // });
-    // }
     
     if ($('#slider-range').length) {
         $('#slider-range').slider({
