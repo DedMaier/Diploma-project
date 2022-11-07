@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Контакты</title>
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+        <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ion.rangeSlider.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.formstyler.min.js"></script>>
+        <script defer src="js/jquery.bxslider.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/datepicker.js"></script>
+        <script defer src="js/main.js"></script>
+
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="header container">
+                <a href="#">
+                    <div class="logo"><img src="/images/1-logo.svg" alt="Лого" width="100"></div>
+                </a>
+                  <div id="city" title="Выбор города"><b>Ваш город: </b>
+                    <span> Москва</span> 
+                  </div>
+                <div class="search-header">
+                    <form class="search-form">
+                        <input type="search" class="query" name="query" placeholder="Найти в магазине">
+                        <button type="button" class="search-button"></button>
+                    </form>
+                </div>
+                <a href="order.html" class="header-item cart">Корзина</a>
+                <a href="#" class="header-item login">Вход</a>
+                <nav id="nav" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+            </div>
+        
+              <nav class="header container">
+                  <a href="order.html" class="nav-cart">Корзина</a>
+                  <a href="#" class="nav-login">Вход</a>
+              </nav>
+          </header>
+        
+            <nav class="nav">
+              <ul class="menu">
+                <li class="menu__list"><a href="index.html" class="menu__link">Главная</a></li>
+                  <li class="menu__list menu__currentPage"><a href="catalog.html" class="menu__link">Каталог</a>
+                    <div class="drop">
+                        <div class="drop__flex">
+                            <ul class="drop__menu">
+                                <li><a href="product.html" class="drop__link">Квадроциклы</a></li>
+                                <li><a href="product.html" class="drop__link">Снегоходы </a></li>
+                                <li><a href="product.html" class="drop__link">Гидроциклы</a></li>
+                                <li><a href="product.html" class="drop__link">Вездеходы</a></li>
+                                <li><a href="product.html" class="drop__link">Катера</a></li>
+                                <li><a href="product.html" class="drop__link">Аксессуары</a></li>
+                            </ul>
+                        </div> 
+                  </li>
+                <li class="menu__list"><a href="card-gidro.html" class="menu__link">Товар</a></li>
+                <li class="menu__list"><a href="index.html" class="menu__link">Доставка</a></li>
+                <li class="menu__list"><a href="contacts.html" class="menu__link">Контакты</a></li>
+              </ul>
+            </nav>
+        
+          <section>
+            <div id="sale" class="container">
+                <div class="sale-wrapper">
+                    <div class="sale-info">
+                        <h2>Акция</h2>
+                        <p>Распродажа. Скидки до 50%.</p>
+                    </div>
+                    <div class="sale-countdown">
+                        <div class="sale-countdown-header">До конца акции осталось:</div>
+                        <div class="days-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="hours-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="minutes-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="days-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="sale-countdown-footer">
+                            Дней
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Часов
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Минут
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Секунд
+                        </div>
+                    </div>
+                </div>
+            </div>  
+          </section>
+
+          <div class="contacts">
+            <div class="container">
+                <h2>Наши магазины</h2>
+                <img src="images/1-logo.svg" width="50">
+                <div class="shop">
+                    <div class="shop_block">
+                        <div class="shop1_img">
+                            <img src="images/2.Баннер/1-магазин.png" alt="Фото магазина" height="200">
+                        </div>
+                        <div class="shop_address">
+                            <p><b>Адрес:</b> г. Москва, ул. Классная</p>
+                            <p><b>Номер телефона:</b></p>
+                            <a href="#">+8 (495) 342-87-98</a>
+                            <p><a href="#">+8 (499) 127-81-08</a></p>
+                        </div>
+                    </div>
+                    <div class="shop_nav">
+                        <button class="btn_map"><a href="https://yandex.ru/maps/?um=constructor%3A15adc09c86309e9350374c03e54ce2db0b130e5fa36b4574f9b5d116558a3e1f&source=constructorLink" target="_blank">Мы здесь на карте</a></button>
+                        <a href="#popup" class="popup_link"><button class="btn_chart">График работы</button></a>
+                    </div> 
+                </div>
+                <div class="shop">
+                    <div class="shop_block">
+                        <div class="shop2_img">
+                            <img src="images/2.Баннер/2-магазин.png" alt="Фото магазина" height="200">
+                        </div>
+                        <div class="shop_address">
+                            <p><b>Адрес:</b> г. Москва, ул. Прекрасная</p>
+                            <p><b>Номер телефона:</b></p>
+                            <a href="#">+8 (495) 341-11-08</a>
+                            <a href="#">+8 (499) 341-11-08</a>
+                        </div>
+                    </div>
+                    <div class="shop_nav">
+                        <button class="btn_map"><a href="https://yandex.ru/maps/?um=constructor%3A15adc09c86309e9350374c03e54ce2db0b130e5fa36b4574f9b5d116558a3e1f&source=constructorLink" target="_blank">Мы здесь на карте</a></button>
+                        <a href="#popup" class="popup_link"><button class="btn_chart">График работы</button></a>
+                    </div>        
+                </div>
+                <div class="shop">
+                    <div class="shop_block">
+                        <div class="shop3_img">
+                            <img src="images/2.Баннер/3-магазин.png" alt="Фото магазина" height="200">
+                        </div>
+                        <div class="shop_address">
+                            <p><b>Адрес:</b> г. Москва, ул. Мудрая</p>
+                            <p><b>Номер телефона:</b></p>
+                            <a href="#">+8 (495) 177-00-00</a>
+                            <a href="#">+8 (499) 177-00-00</a>
+                        </div>
+                    </div>
+                    <div class="shop_nav">
+                        <button class="btn_map"><a href="https://yandex.ru/maps/?um=constructor%3A15adc09c86309e9350374c03e54ce2db0b130e5fa36b4574f9b5d116558a3e1f&source=constructorLink" target="_blank">Мы здесь на карте</a></button>
+                        <a href="#popup"class="popup_link"><button class="btn_chart">График работы</button></a>
+                    </div> 
+                </div>
+                <div class="popup" id="popup">
+                    <a href="#site" class="popup_area"></a>
+                    <div class="popup_body">
+                        <div class="popup_content">
+                            <a href="#" class="popup_close"><img src="images/close.png" alt="close"></a>
+                            <div class="popup_text">
+                                <table>
+                                    <tr>
+                                        <th>День</th>
+                                        <th>Время работы</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Понедельник</td>
+                                        <td>10:00 - 19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вторник</td>
+                                        <td>10:00 - 19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Среда</td>
+                                        <td>10:00 - 19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Четверг</td>
+                                        <td>10:00 - 19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пятница</td>
+                                        <td>10:00 - 19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суббота</td>
+                                        <td>Выходной</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Воскресенье</td>
+                                        <td>Выходной</td>
+                                    </tr>
+                                </tr>
+                                </table>
+                                <p>*Время указано для региона: Россия, Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="questions">
+            <div class="container">
+                <h2>Часто задаваемые вопросы!</h2>
+                <div class="questions_accordion-wrapper">
+                    <div class="accordion-item">
+                        <div class="accordion-item-title">Нужна ли регистрация на сайте для оформления заказа?</div>
+                        <div class="accordion-item-content">Нет. Достаточно ввести данные получателя доставки, контактный телефон и ожидать звонка оператора для подтверждения заказа.  </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item-title">Что дает регистрация на сайте?</div>
+                        <div class="accordion-item-content">Регистрация на сайте позволяет Вам пользоваться всеми привелегиями постоянных клиентов.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item-title">Осуществляете ли Вы доставку по городам?</div>
+                        <div class="accordion-item-content">Да, конечно. Оплата наложенным платежом при получении на почте. А так же  онлайн оплата банковской карточкой. </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-item-title">Есть ли возможность самовывоза товара?</div>
+                        <div class="accordion-item-content">Да. По адресам наших магазинов. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <footer class="footer">
+            <div class="container">
+              <div class="footer__top">
+                <div class="footer__top-inner">
+                  <div class="footer__top-item footer__top-newsLatter">
+                    <h6 class="footer__top-title">
+                      Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+                    </h6>
+                    <form class="footer-form">
+                      <input class="footer-form__input" type="text" placeholder="Введите ваш e-mail:">
+                      <button class="footer-form__btn" type="submit">Отправить</button>
+                    </form>
+                  </div>
+                  <div class="footer__top-item footer__top-itemDrop">
+                    <h6 class="footer__top-title footer__topDrop">Информация</h6>
+                    <ul class="footer-list">
+                      <li class="footer-list__item"><a href="#">О компании</a></li>
+                      <li class="footer-list__item"><a href="#">Контакты</a></li>
+                      <li class="footer-list__item"><a href="#">Акции</a></li>
+                      <li class="footer-list__item"><a href="#">Магазины</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__top-item">
+                    <h6 class="footer__top-title footer__topDrop">Интернет-магазин</h6>
+                    <ul class="footer-list">
+                      <li class="footer-list__item"><a href="#">Доставка и самовывоз</a></li>
+                      <li class="footer-list__item"><a href="#">Оплата</a></li>
+                      <li class="footer-list__item"><a href="#">Возврат-обмен</a></li>
+                      <li class="footer-list__item"><a href="#">Новости</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__top-item footer__top-social">
+                    <ul class="social-list">
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-instagram.svg" alt="instagram">
+                      </a></li>
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-vk.svg" alt="vk">
+                      </a></li>
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-facebook.svg" alt="facebook">
+                      </a></li>
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-youtube.svg" alt="youtube">
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__bottom">
+                <a class="footer__bottom-link" href="#">Договор оферты</a>
+                <a class="footer__bottom-link" href="#">Политика обработки персональных данных</a>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>

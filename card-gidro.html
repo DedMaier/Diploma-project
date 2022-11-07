@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Интернет-магазин</title>
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/product-page.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
+  <script src="js/slick.min.js"></script>
+
+  <script defer src="js/slider.js"></script>
+
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script src="js/jquery.formstyler.min.js"></script>
+  
+  <script defer src="js/jquery.bxslider.min.js"></script>
+  <script src="js/main.js"></script> 
+
+</head>
+<body>
+
+  <header>
+    <div class="header container">
+        <a href="#">
+            <div class="logo"><img src="/images/1-logo.svg" alt="Лого" width="100"></div>
+        </a>
+          <div id="city" title="Выбор города"><b>Ваш город: </b>
+            <span> Москва</span> 
+          </div>
+        <div class="search-header">
+            <form class="search-form">
+                <input type="search" class="query" name="query" placeholder="Найти в магазине">
+                <button type="button" class="search-button"></button>
+            </form>
+        </div>
+        <a href="order.html" class="header-item cart">Корзина</a>
+        <a href="#" class="header-item login">Вход</a>
+        <nav id="nav" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </nav>
+    </div>
+
+      <nav class="header container">
+          <a href="order.html" class="nav-cart">Корзина</a>
+          <a href="#" class="nav-login">Вход</a>
+      </nav>
+  </header>
+
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu__list"><a href="index.html" class="menu__link">Главная</a></li>
+          <li class="menu__list menu__currentPage"><a href="catalog.html" class="menu__link">Каталог</a>
+            <div class="drop">
+                <div class="drop__flex">
+                    <h3 class="drop__h3">Техника</h3>
+                    <ul class="drop__menu">
+                        <li><a href="product.html" class="drop__link">Квадроциклы</a></li>
+                        <li><a href="product.html" class="drop__link">Снегоходы </a></li>
+                        <li><a href="product.html" class="drop__link">гидроциклы</a></li>
+                        <li><a href="product.html" class="drop__link">Вездеходы</a></li>
+                        <li><a href="product.html" class="drop__link">Катера</a></li>
+                        <li><a href="product.html" class="drop__link">Аксессуары</a></li>
+                    </ul>
+                </div>   
+          </li>
+        <li class="menu__list"><a href="card-gidro.html" class="menu__link">Товар</a></li>
+        <li class="menu__list"><a href="index.html" class="menu__link">Доставка</a></li>
+        <li class="menu__list"><a href="contacts.html" class="menu__link">Контакты</a></li>
+      </ul>
+    </nav>
+
+  <section>
+    <div id="sale" class="container">
+        <div class="sale-wrapper">
+            <div class="sale-info">
+                <h2>Акция</h2>
+                <p>Распродажа. Скидки до 50%.</p>
+            </div>
+            <div class="sale-countdown">
+                <div class="sale-countdown-header">До конца акции осталось:</div>
+                <div class="days-left">
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                </div>
+                <div class="timer-separator"></div>
+                <div class="hours-left">
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                </div>
+                <div class="timer-separator"></div>
+                <div class="minutes-left">
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                </div>
+                <div class="timer-separator"></div>
+                <div class="days-left">
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                    <span class="digit-wrapper">
+                        <span class="digit">0</span>
+                    </span>
+                </div>
+                <div class="sale-countdown-footer">
+                    Дней
+                </div>
+                <div class="blank"></div>
+                <div class="sale-countdown-footer">
+                    Часов
+                </div>
+                <div class="blank"></div>
+                <div class="sale-countdown-footer">
+                    Минут
+                </div>
+                <div class="blank"></div>
+                <div class="sale-countdown-footer">
+                    Секунд
+                </div>
+            </div>
+        </div>
+    </div>  
+  </section>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs__inner">
+      <ul class="breadcrumbs__list mobile-overflow">
+        <li class="breadcrumbs__list-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumbs__list-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__list-item"><a href="product.html">Гидроциклы</a></li>
+        <li class="breadcrumbs__list-item"><span>Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="product-card page-section">
+  <div class="container">
+    <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product"></div>
+      <div class="product-card__inner">
+        <div class="product-card__img-box product-item--sale" >
+        <!--<img src="images/content/gidrotsikl-large.png" alt="gidrotsikl">-->
+        <img class="product-card__img" src="images/content/gidrotsikl-large.png" alt="gidrotsikl-large">
+        <div class="gallery">
+          <div>
+              <div class="rail">
+                  <img src="./images/content/gidrotsikl-1.png" alt="гидроцикл-1">
+                  <img src="./images/content/gidrotsikl-2.png" alt="гидроцикл-2">
+                  <img src="./images/content/gidrotsikl-3.png" alt="гидроцикл-3">
+                  <img src="./images/content/gidrotsikl-4.png" alt="гидроцикл-4">
+                  <img src="./images/content/gidrotsikl-5.png" alt="гидроцикл-5">
+                  <img src="./images/content/gidrotsikl-6.png" alt="гидроцикл-6">
+                  <img src="./images/content/gidrotsikl-7.png" alt="гидроцикл-7">
+                  <img src="./images/content/gidrotsikl-8.png" alt="гидроцикл-8">
+                  <img src="./images/content/gidrotsikl-9.png" alt="гидроцикл-9">
+                  <img src="./images/content/gidrotsikl-10.png" alt="гидроцикл-10">
+                  <img src="./images/content/gidrotsikl-11.png" alt="гидроцикл-11">
+                  <img src="./images/content/gidrotsikl-12.png" alt="гидроцикл-12">
+              </div>
+          </div>
+          <button type="button" class="gal_left disabled"><span>&#8249;</span></button>
+          <button type="button" class="gal_right"><span>&#8250;</span></button>
+        </div>
+      <div class="offer">
+        <p class="product-card__price-old">1 200 475 ₽</p>
+        <p class=" product-card__price-new price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="price">1 100 475</span>
+          <meta itemprop="priceCurrency" content="RUB">
+      </p>
+      <a class="product-card__link" href="#">Нашли дешевле? Снизим цену!</a>
+      <div class=" product-card__btn product-card__btn-mobile">
+        <button type="button" class="product-card__btn btn btn-success btn-buy"><a href="order.html"><span>Купить</span></a></button>
+      </div>
+    </div>
+  </div>
+      <div class="product-card__content offer">
+        <h1 class="product-card__title" itemprop="name">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
+        <p class="product-card__code">Код товара: 366666-2</p>
+        <div class="product-card__buttons">
+          <a class="product-card__icon-favorite" href="#">
+            <img src="images/icon-heart.svg" alt="icon-heart">
+          </a>
+          <a class="product-card__icon-favorite" href="#">
+            <img src="images/icon-comparsion.svg" alt="icon-comparsion">
+          </a>
+          <a class="rate" href="#">
+            <div class="rate-yo" data-rateyo-rating="4"></div>
+          </a>
+        </div>
+        <div class="tabs-wrapper product-card__tabs">
+          <div class="tabs">
+            <a class="tab product-card__tab tab--active" href="#product-1">Характеристики</a>
+            <a class="tab product-card__tab" href="#product-2">Наличие в магазине</a>
+          </div>
+          <div class="tabs-container">
+            <div class="tabs-content product-card__tab-content tabs-content--active" id="product-1">
+              <ul class="product-card__list">
+                <li class="product-card__item">
+                  <div class="product-card__item-left">Производитель</div>
+                  <div class="product-card__item-right">Канада</div>
+                </li>
+                <li class="product-card__item">
+                  <div class="product-card__item-left">Количество мест, шт:</div>
+                  <div class="product-card__item-right">3</div>
+                </li>
+                <li class="product-card__item">
+                  <div class="product-card__item-left">Мощность, л.с.</div>
+                  <div class="product-card__item-right">155</div>
+                </li>
+                <li class="product-card__item">
+                  <div class="product-card__item-left">Тип двигателя</div>
+                  <div class="product-card__item-right">Бензиновый</div>
+                </li>
+                <li class="product-card__item">
+                  <div class="product-card__item-left">Год выпуска</div>
+                  <div class="product-card__item-right">2022</div>
+                </li>
+              </ul>
+              <a class="product-card__more" href="#">Показать еще</a>
+              <div class="product-card__btn">
+                <button type="button" class="product-card__btn btn btn-success btn-buy"><a href="order.html"><span>Купить</span></a></button>
+              </div>
+            </div>
+            <div class="tabs-content product-card__tab-content" id="product-2">content-2</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card__tabs">
+  <div class="container">
+    <div class="tabs-wrapper">
+      <div class="tabs card__tab-box mobile-overflow">
+        <a class="tab card__tab" href="#product-card__tabs-2">Характеристики</a>
+        <a class="tab card__tab" href="#product-card__tabs-3">Отзывы</a>
+        <a class="tab card__tab tab--active" href="#product-card__tabs-4">Самовывоз</a>
+        <a class="tab card__tab" href="#product-card__tabs-5">Доставка</a>
+        <a class="tab card__tab" href="#product-card__tabs-6">Сервис</a>
+        <a class="tab card__tab" href="#product-card__tabs-7">Гарантия</a>
+      </div>
+    </div>
+      <div class="tabs-container">
+        <div class="card__tab-content tabs-content" id="product-card__tabs-1">content-1</div>
+        <div class="card__tab-content tabs-content" id="product-card__tabs-2">content-2</div>
+        <div class="card__tab-content tabs-content" id="product-card__tabs-3">content-3</div>
+        <div class="card__tab-content tabs-content tabs-content--active" id="product-card__tabs-4">
+          <form>
+            <div class="card__top-line">
+              <label class="card__label-search">
+                Магазин
+                <input class="card__input-search" type="text">
+              </label>
+              <label class="card__label-pickup">
+                <input class="filter-style" type="radio" name="pickup">
+                Забрать сегодня
+              </label>
+              <label class="card__label-pickup">
+                <input class="filter-style" type="radio" name="pickup" checked>
+                Забрать в течение недели
+              </label>
+            </div>
+            <ul class="card__list">
+              <li class="card__list-item card__list-itemTitle">
+                <div class="card__list-address">Адрес</div>
+                <div class="card__list-workHours">Режим работы</div>
+                <div class="card__list-avialable">Доступно</div>
+                <div class="card__list-num">Количество</div>
+                <div class="card__list-btn"></div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">г. Москва, ул. Классная</div>
+                <div class="card__list-workHours">
+                  <div class="workHours"><span>пн-пт:</span><span>10:00-19:00</span></div>
+                  <div class="workHours"><span>сб-вс:</span><span>Выходной</span></div>
+                </div>
+                <div class="card__list-avialable">В наличии</div>
+                <div class="card__list-num">1</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">г. Москва, ул. Прекрасная</div>
+                <div class="card__list-workHours">
+                  <div class="workHours"><span>пн-пт:</span><span>10:00-19:00</span></div>
+                  <div class="workHours"><span>сб-вс:</span><span>Выходной</span></div>
+                </div>
+                <div class="card__list-avialable">В наличии</div>
+                <div class="card__list-num">2</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+              <li class="card__list-item">
+                <div class="card__list-address">г. Москва, ул. Мудрая
+                </div>
+                <div class="card__list-workHours">
+                  <div class="workHours"><span>пн-пт:</span><span>10:00-19:00</span></div>
+                  <div class="workHours"><span>сб-вс:</span><span>Выходной</span></div>
+                </div>
+                <div class="card__list-avialable">Нет в наличии</div>
+                <div class="card__list-num">0</div>
+                <div class="card__list-btn">
+                  <button type="submit">КУПИТЬ</button>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div class="card__tab-content tabs-content" id="product-card__tabs-5">content-5</div>
+        <div class="card__tab-content tabs-content" id="product-card__tabs-6">content-6</div>
+        <div class="card__tab-content tabs-content" id="product-card__tabs-7">content-7</div>
+      </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__top-inner">
+        <div class="footer__top-item footer__top-newsLatter">
+          <h6 class="footer__top-title">
+            Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+          </h6>
+          <form class="footer-form">
+            <input class="footer-form__input" type="text" placeholder="Введите ваш e-mail:">
+            <button class="footer-form__btn" type="submit">Отправить</button>
+          </form>
+        </div>
+        <div class="footer__top-item footer__top-itemDrop">
+          <h6 class="footer__top-title footer__topDrop">Информация</h6>
+          <ul class="footer-list">
+            <li class="footer-list__item"><a href="#">О компании</a></li>
+            <li class="footer-list__item"><a href="#">Контакты</a></li>
+            <li class="footer-list__item"><a href="#">Акции</a></li>
+            <li class="footer-list__item"><a href="#">Магазины</a></li>
+          </ul>
+        </div>
+        <div class="footer__top-item">
+          <h6 class="footer__top-title footer__topDrop">Интернет-магазин</h6>
+          <ul class="footer-list">
+            <li class="footer-list__item"><a href="#">Доставка и самовывоз</a></li>
+            <li class="footer-list__item"><a href="#">Оплата</a></li>
+            <li class="footer-list__item"><a href="#">Возврат-обмен</a></li>
+            <li class="footer-list__item"><a href="#">Новости</a></li>
+          </ul>
+        </div>
+        <div class="footer__top-item footer__top-social">
+          <ul class="social-list">
+            <li class="social-list__item"><a href="#">
+              <img src="images/icon-instagram.svg" alt="instagram">
+            </a></li>
+            <li class="social-list__item"><a href="#">
+              <img src="images/icon-vk.svg" alt="vk">
+            </a></li>
+            <li class="social-list__item"><a href="#">
+              <img src="images/icon-facebook.svg" alt="facebook">
+            </a></li>
+            <li class="social-list__item"><a href="#">
+              <img src="images/icon-youtube.svg" alt="youtube">
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a class="footer__bottom-link" href="#">Договор оферты</a>
+      <a class="footer__bottom-link" href="#">Политика обработки персональных данных</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

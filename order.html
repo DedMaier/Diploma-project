@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Корзина</title>
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.css">
+        <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+        <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ion.rangeSlider.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.formstyler.min.js"></script>>
+        <script defer src="js/jquery.bxslider.min.js"></script>
+        <script defer src="js/jquery-ui.min.js"></script>
+        <script defer src="js/slider.js"></script>
+        <script defer src="js/datepicker.js"></script>
+        <script defer src="js/main.js"></script>
+        <script defer src="js/gallery.js"></script>
+        <script defer src="js/lightbox.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="header container">
+                <a href="#">
+                    <div class="logo"><img src="/images/1-logo.svg" alt="Лого" width="100"></div>
+                </a>
+                  <div id="city" title="Выбор города"><b>Ваш город: </b>
+                    <span> Москва</span> 
+                  </div>
+                <div class="search-header">
+                    <form class="search-form">
+                        <input type="search" class="query" name="query" placeholder="Найти в магазине">
+                        <button type="button" class="search-button"></button>
+                    </form>
+                </div>
+                <a href="order.html" class="header-item cart">Корзина</a>
+                <a href="#" class="header-item login">Вход</a>
+                <nav id="nav" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </nav>
+            </div>
+        
+              <nav class="header container">
+                  <a href="order.html" class="nav-cart">Корзина</a>
+                  <a href="#" class="nav-login">Вход</a>
+              </nav>
+          </header>
+        
+            <nav class="nav">
+              <ul class="menu">
+                <li class="menu__list"><a href="index.html" class="menu__link">Главная</a></li>
+                  <li class="menu__list menu__currentPage"><a href="index.html" class="menu__link">Каталог</a>
+                    <div class="drop">
+                        <div class="drop__flex">
+                            <!--<h3 class="drop__h3">Техника</h3>-->
+                            <ul class="drop__menu">
+                                <li><a href="catalog.html" class="drop__link">Квадроциклы</a></li>
+                                <li><a href="catalog.html" class="drop__link">Снегоходы </a></li>
+                                <li><a href="catalog.html" class="drop__link">Гидроциклы</a></li>
+                                <li><a href="catalog.html" class="drop__link">Вездеходы</a></li>
+                                <li><a href="catalog.html" class="drop__link">Катера</a></li>
+                                <li><a href="catalog.html" class="drop__link">Запчасти</a></li>
+                            </ul>
+                        </div> 
+                  </li>
+                <li class="menu__list"><a href="product.html" class="menu__link">Товар</a></li>
+                <li class="menu__list"><a href="index.html" class="menu__link">Доставка</a></li>
+                <li class="menu__list"><a href="contacts.html" class="menu__link">Контакты</a></li>
+              </ul>
+            </nav>
+        
+          <section>
+            <div id="sale" class="container">
+                <div class="sale-wrapper">
+                    <div class="sale-info">
+                        <h2>Акция</h2>
+                        <p>Распродажа. Скидки до 50%.</p>
+                    </div>
+                    <div class="sale-countdown">
+                        <div class="sale-countdown-header">До конца акции осталось:</div>
+                        <div class="days-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="hours-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="minutes-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="timer-separator"></div>
+                        <div class="days-left">
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                            <span class="digit-wrapper">
+                                <span class="digit">0</span>
+                            </span>
+                        </div>
+                        <div class="sale-countdown-footer">
+                            Дней
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Часов
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Минут
+                        </div>
+                        <div class="blank"></div>
+                        <div class="sale-countdown-footer">
+                            Секунд
+                        </div>
+                    </div>
+                </div>
+            </div>  
+          </section>
+        
+        <main class="order">
+            <section class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="index">#</th>
+                            <th scope="col" class="name">Название</th>
+                            <th scope="col" class="qty">Количество</th>
+                            <th scope="col" class="price">Цена</th>
+                            <th scope="col" class="sum">Сумма</th>
+                            <th scope="col" class="delete">Удалить</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- список товаров генерим на лету -->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                        <th scope="col" class="index"></th>
+                        <th scope="col" class="allsum" colspan="5">
+                            Итого:
+                            <span></span>
+                        </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            
+            <section class="container">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail" class="form-label">Ваша почта</label>
+                        <input type="text" class="form-control" id="mail" name="mail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Ваш телефон</label>
+                        <input type="text" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="addr" class="form-label">Ваш адрес</label>
+                        <input type="text" class="form-control" id="addr" name="addr">
+                    </div>
+                    <label for="date" class="form-label">Желаемая дата доставки</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="date" name="date" readonly>
+                        <button class="btn btn-outline-secondary icon" type="button">&#xe907;</button>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comm" class="form-label">Комментарий</label>
+                        <textarea class="form-control" id="comm" name="comm" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agree" name="agree" checked>
+                        <label class="form-check-label" for="agree">Согласен на обработку моих персональных данных</label>
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary submit">Оформить заказ</button>
+                    </div>
+                </form>
+            </section>
+            
+            <section class="container empty">
+                <h1>Ваша корзина пуста</h1>
+                <p>Выберите товары в каталоге</p>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="container">
+              <div class="footer__top">
+                <div class="footer__top-inner">
+                  <div class="footer__top-item footer__top-newsLatter">
+                    <h6 class="footer__top-title">
+                      Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+                    </h6>
+                    <form class="footer-form">
+                      <input class="footer-form__input" type="text" placeholder="Введите ваш e-mail:">
+                      <button class="footer-form__btn" type="submit">Отправить</button>
+                    </form>
+                  </div>
+                  <div class="footer__top-item footer__top-itemDrop">
+                    <h6 class="footer__top-title footer__topDrop">Информация</h6>
+                    <ul class="footer-list">
+                      <li class="footer-list__item"><a href="#">О компании</a></li>
+                      <li class="footer-list__item"><a href="#">Контакты</a></li>
+                      <li class="footer-list__item"><a href="#">Акции</a></li>
+                      <li class="footer-list__item"><a href="#">Магазины</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__top-item">
+                    <h6 class="footer__top-title footer__topDrop">Интернет-магазин</h6>
+                    <ul class="footer-list">
+                      <li class="footer-list__item"><a href="#">Доставка и самовывоз</a></li>
+                      <li class="footer-list__item"><a href="#">Оплата</a></li>
+                      <li class="footer-list__item"><a href="#">Возврат-обмен</a></li>
+                      <li class="footer-list__item"><a href="#">Новости</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__top-item footer__top-social">
+                    <ul class="social-list">
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-instagram.svg" alt="instagram">
+                      </a></li>
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-vk.svg" alt="vk">
+                      </a></li>
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-facebook.svg" alt="facebook">
+                      </a></li>
+                      <li class="social-list__item"><a href="#">
+                        <img src="images/icon-youtube.svg" alt="youtube">
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__bottom">
+                <a class="footer__bottom-link" href="#">Договор оферты</a>
+                <a class="footer__bottom-link" href="#">Политика обработки персональных данных</a>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
