@@ -11,7 +11,8 @@ function galSlide(direction) {
     let step = parseInt($('.rail img').css('width')) + parseInt($('.rail').css('gap'));
     let move = '';
     if (direction == 'left') { // если двигаемся влево
-        if (windowwidth >= width + pos) { // правый край рельса не может быть левее правого края окна
+        /*if (windowwidth >= width + pos) { // правый край рельса не может быть левее правого края окна*/
+        if (width + pos - windowwidth <= step) { // правый край рельса не может быть левее правого края окна
             galFlag = false;
             return;
         }
@@ -28,7 +29,8 @@ function galSlide(direction) {
     $('.rail').animate({left: move}, 1000, function() {
         if (parseInt($('.rail').css('left')) >= 0) { // если ушли до упора вправо, отключаем левую кнопку
             $('.gallery .gal_left').addClass('disabled');
-        } else if (windowwidth >= width + parseInt($('.rail').css('left'))) { // если ушли до упора влево, отключаем правую кнопку
+        /*} else if (windowwidth >= width + parseInt($('.rail').css('left'))) { // если ушли до упора влево, отключаем правую кнопку*/
+        } else if (width + parseInt($('.rail').css('left')) - windowwidth <= step) { // если ушли до упора влево, отключаем правую кнопку    
             $('.gallery .gal_right').addClass('disabled');
         }
         galFlag = false; // спускаем блокирующий флаг
