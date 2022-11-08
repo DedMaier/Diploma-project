@@ -1,4 +1,4 @@
-/*start breadcrumbs*/
+/*===== start breadcrumbs =====*/
 .breadcrumbs {
   margin-bottom: 40px;
 }
@@ -26,9 +26,9 @@
 .breadcrumbs__list-item:last-child::after {
   display: none;
 }
-/*end breadcrumbs*/
+/*===== end breadcrumbs =====*/
 
-/*start catalog*/
+/*====== start catalog ======*/
 .catalog {
   margin-bottom: 50px;
 }
@@ -139,9 +139,9 @@
 .product-item__img {
   max-width: 100%;
 }
-/*end catalog*/
+/*======== end catalog =========*/
 
-/*start pagination*/
+/*========= start pagination ========*/
 .pagination {
   width: 100%;
   margin-top: 30px;
@@ -170,9 +170,9 @@
 .pagination-list__item a {
   display: block;
 }
-/*end pagination*/
+/*======== end pagination =========*/
 
-/*start aside*/
+/*======== start aside ===========*/
 .aside-filter__tabs {
   display: flex;
   justify-content: space-between;
@@ -235,7 +235,7 @@
 .aside-filter__content {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .aside-filter__content-box {
@@ -516,8 +516,8 @@
 
 .btn-checked__text {
   position: absolute;
-  top: -7px;
-  left: 50%;
+  top: 5px;
+  left: 60%;
   transform: translateX(-57%);
   z-index: 5;
 }

@@ -533,7 +533,7 @@ top:0.9em;
 /*======= end =========*/
 
 
-/* start banner-section*/
+/*====== start banner-section======*/
 .page-section {
   margin-bottom: 30px;
 }
@@ -680,10 +680,10 @@ top:0.9em;
 .sale-item__img {
   object-fit: contain;
 }
-/* end banner-section*/
+/*==== end banner-section ======*/
 
 
-/*start search*/
+/*======= start search =========*/
 .search__tabs {
   margin-bottom: 25px;
 }
@@ -730,10 +730,10 @@ top:0.9em;
   border: none;
   margin-left: -3px;
 }
-/*end search*/
+/*======== end search ==========*/
 
 
-/*start categories*/
+/*======== start categories =========*/
 .categories__inner {
   display: flex;
   justify-content: space-between;
@@ -784,9 +784,9 @@ top:0.9em;
   content: url("../images/link-arrow.svg");
   padding-left: 2px;
 }
-/*end categories*/
+/*======== end categories ===========*/
 
-/*start products*/
+/*========= start products ===========*/
 .product-item__wrapper {
   position: relative;
   width: 272px;
@@ -982,7 +982,6 @@ top:0.9em;
 .images {
   flex: 0 0 400px;
 }
-
 .gallery {
   width: 460px;
   height: 80px;
