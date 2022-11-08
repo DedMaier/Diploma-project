@@ -48,6 +48,10 @@ footer, header, main, nav, section, input, textarea, select, option {
     outline: none;
     background: none;
 }
+
+html * {
+  max-height: 1000000px;
+}
 html {
   box-sizing: border-box;
 }
@@ -968,82 +972,8 @@ top:0.9em;
 }
 /*========= end products ========*/
 
-/*========= order =========*/
-main {
-  flex: 1 1 auto;
-}
-.order .icon {
-  font-family: 'icomoon' !important;
-  cursor: pointer;
-}
-.table tfoot th {
-  border-bottom: none;
-}
-.table .allsum span {
-  color: red;
-}
-.table .allsum span::after {
-  content: '\20\20BD'
-}
-.table .index {
-  text-align: center;
-  width: 50px;
-}
-.table .qty {
-  text-align: center;
-  width: 200px;
-}
-.table .price {
-  text-align: center;
-  width: 100px;
-}
-.table .sum {
-  text-align: center;
-  width: 100px;
-}
-.table td.delete {
-  text-align: center;
-  width: 100px;
-}
-.table .qty strong {
-  min-width: 100px;
-  text-align: center;
-  display: inline-block;
-  user-select: none;
-}
-.table .qty span {
-  border-radius: 50%;
-  border: 1px solid black;
-  background: blue;
-  color: white;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  text-align: center;
-  line-height: 20px;
-  cursor: pointer;
-  user-select: none;
-}
-.table .qty .minus {
-  margin-right: 10px;
-}
-.table .qty .plus {
-  margin-left: 10px;
-}
-#order {
-  height: 30px;
-  text-align: center;
-}
-.container.empty,
-.empty .container {
-  display: none;
-}
-.empty .container.empty {
-  display: block;
-}
-/*========= end order =========*/
 
-/*======= product =======*/
+/*======= product galer =======*/
 .product {
   display: flex;
   gap: 30px;
@@ -1052,8 +982,9 @@ main {
 .images {
   flex: 0 0 400px;
 }
+
 .gallery {
-  width: 470px;
+  width: 460px;
   height: 80px;
   margin-top: 20px;
   padding: 0 20px;
@@ -1072,10 +1003,10 @@ main {
   opacity: .3;
 }
 .gallery button:hover {
-  color: #032b4e;
+  color: #063b69;
 }
 .gallery .disabled:hover {
-  color: #032b4e;
+  color: #0d85ee;
 }
 .gallery .gal_left {
   left: 0;
@@ -1089,7 +1020,7 @@ main {
   margin-top: -9px;
 }
 .gallery > div {
-  width: 440px;
+  width: 420px;
   height: 50px;
   overflow: hidden;
   position: relative;
@@ -1101,6 +1032,7 @@ main {
   top: 0;
   left: 0;
   height: 50px;
+  border: 1px solid grey;
 }
 .product .price {
   color:#0d85ee ;
@@ -1112,10 +1044,8 @@ main {
 }
 .offer p {
   margin: 0;
-  /*text-align: left;*/
 }
 .offer button {
-  /*width: 90px;*/
   font-weight: bold;
 }
 

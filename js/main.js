@@ -16,14 +16,8 @@ let startbasket = [
         price: 1100475,
         quantity: 1,
         link: ''
-    },
-    {
-        id: 111,
-        name: 'Гидроцикл BRP SeeDoo Green',
-        price: 1323700,
-        quantity: 1,
-        link: ''
     }
+  
 ];
 
 /* functions */
@@ -102,7 +96,7 @@ $(function(){
     
     $('#city').click(function(){
         getModalWindow('citymodal');
-        $('.modal').append('<h1>Выберите город:</h1><input type="text" id="citysearch" placeholder="Введите часть названия города..."><div class="columns"></div>');
+        $('.modal').append('<h5>Выберите город:</h5><input type="text" id="citysearch" placeholder="Введите часть названия города..."><div class="columns"></div>');
         for (let city of citylist) {
             $('.modal .columns').append('<p>' + city + '</p>');
         }
@@ -123,6 +117,8 @@ $(function(){
             });
         });
     });
+
+    /*================*/
     
     if ($('.action').length) {
         actiontimer();
@@ -173,79 +169,8 @@ $(function(){
         }
     }
 
-/*$(function(){
-    $('#city').click(function(){
-        getModalWindow('citymodal');
-        $('.modal').append('<h5>Выберите город:</h5><input type="text" id="citysearch" placeholder="Введите название города..."><div class="columns"></div>');
-        for (let city of citylist) {
-            $('.modal .columns').append('<p>' + city + '</p>');
-        }
-        $('.modal p').click(function(){
-            $('#city span').html($(this).html());
-            dropModalWindow();
-        });
-        $('#citysearch').on('input', function(){
-            let namepart = $('#citysearch').val().toLowerCase();
-            $('.modal p').each(function(){
-                if (!this.innerHTML.toLowerCase().includes(namepart)) {
-                    this.style.display = 'none';
-                } else {
-                    this.style.display = 'block';
-                }
-            });
-        });
-    });
-    
-    if ($('.action').length) {
-        actiontimer();
-        let timer0 = setInterval(function(){
-            if (!actiontimer()) clearInterval(timer0);
-        }, 1000);
-    }
-    
-    $('.slider').each(function(){
-        makeSlider(this.id, 2000);
-    });
-    
-    if ($('.catmenu li li').length) {
-        if ($('.catmenu.simple').length) { // если мы хотим простейший аккордеон без сложной анимации
-            $('.catmenu > ul > li').click(function(e){
-                if (e.target.tagName != 'A') {
-                    $('.open').removeClass('open'); // отнимаем класс open у ранее открытого вложенного списка
-                    $(this).find('ul').addClass('open'); // добавляем класс open вложенному списку в кликнутом пункте
-                }
-            });
-        } else { // если мы хотим аккордеон с более красивой анимацией
-            $('.catmenu li li').slideUp(1); // скрываем все пункты второго уровня
-            $('.catmenu > ul > li').click(function(e){ // ловим клик на пункте первого уровня
-                if ((e.target.tagName != 'A') && (!$(this).find('.open').length)) { // если клик не был по ссылке и вложенный список в этом пункте уже не раскрыт...
-                    let here = $(this).find('ul'); // сохраняем указатель на вложенный список в кликнутом пункте 
-                    if (here.length) { // если в кликнутом пункте есть вложенный список...
-                        if ($('.catmenu .open').length) { // если был раскрытый вложенный список...
-                            $('.catmenu .open li').slideUp(1000, function(){ // прячем его пункты
-                                $('.catmenu .open').removeClass('open'); // затем убираем с него класс open
-                                here.find('li').slideDown(1000, function(){ // затем открываем пункты списка по нашему указателю
-                                    here.addClass('open'); // и вешаем на него класс open
-                                });
-                            });
-                        } else { // если раскрытого вложенного списка не было...
-                            here.find('li').slideDown(1000, function(){ // открываем пункты списка по нашему указателю
-                                here.addClass('open'); // и вешаем на него класс open
-                            });
-                        }
-                    } else {
-                        if ($('.catmenu .open').length) { // если был раскрытый вложенный список...
-                            $('.catmenu .open li').slideUp(1000, function(){ // прячем его пункты
-                                $('.catmenu .open').removeClass('open'); // затем убираем с него класс open
-                            });
-                        }
-                    }
-                }
-            });
-        }
-    }*/
-    
-    
+ /*==================*/   
+   
     if ($('#slider-range').length) {
         $('#slider-range').slider({
             range: true,
