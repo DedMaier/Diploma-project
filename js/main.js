@@ -3,21 +3,7 @@ let citylist = ['Москва','Караганда', 'Магадан', 'Любе
 let rangemin = 0;
 let rangemax = 300000;
 let startbasket = [
-    {
-        id: 1,
-        name: 'Гидроцикл BRP SeeDoo Black',
-        price: 1049500,
-        quantity: 1,
-        link: ''
-    },
-    {
-        id: 2,
-        name: 'Гидроцикл BRP SeeDoo Blue',
-        price: 1100475,
-        quantity: 1,
-        link: ''
-    }
-  
+   
 ];
 
 /* functions */
@@ -668,6 +654,7 @@ $(function(){
         let aim = $(this).parents('.product');
         res.id = aim.data('product-id');
         res.name = aim.find('h1').html();
+        /*res.price = aim.find('.price span').html().replace(/\D/g, '');*/
         res.price = aim.find('.price span').html();
         res.quantity = 1
         res.link = location.href;

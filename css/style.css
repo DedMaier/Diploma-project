@@ -99,6 +99,37 @@ body {
   margin: 0 auto;
 }
 
+/* icons */
+.icon::before {
+  font-family: 'icomoon';
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: white;
+  text-align: center;
+}
+/*.icon:hover::before {
+  color: lightblue;
+}
+.logo::before {
+  content: '\e900';
+}
+.login::before {
+  content: '\e902';
+}
+.order::before {
+  content: '\e901';
+}
+.cat::before {
+  content: '\e903';
+}*/
+.to_left::before {
+  content: '\e905';
+}
+.to_right::before {
+  content: '\e904';
+}
+
 /*========= modals ===========*/
 .screener {
   background: rgba(0,0,0,.3);

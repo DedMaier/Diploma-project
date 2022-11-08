@@ -5,28 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Интернет-магазин</title>
-  <!--<link rel="stylesheet" href="css/jquery.formstyler.css">
-  <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
-  <link rel="stylesheet" href="css/ion.rangeSlider.min.css">
-  <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/media.css">-->
-  
+
   <link rel="stylesheet" href="css/product-page.css">
   <link rel="stylesheet" href="css/catalog.css">
   <link rel="stylesheet" href="css/jquery.rateyo.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>-->
   <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <!--<script defer src="js/slider.js"></script>-->
   <script src="js/slider.js"></script>
   <script src="js/ion.rangeSlider.min.js"></script>
   <script src="js/jquery.formstyler.min.js"></script>
-  
   <script src="js/jquery.bxslider.min.js"></script>
-+ <script src="js/jquery.rateyo.min.js"></script>
++ <!--<script src="js/jquery.rateyo.min.js"></script>-->
 + <script src="js/gallery.js"></script>
   <script src="js/main.js"></script> 
 
@@ -165,14 +157,16 @@
 
 <section class="product-card page-section">
   <div class="container">
-    <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product"></div>
+    <div class="product" data-product-id="12345" itemscope itemtype="https://schema.org/Product">
       <div class="product-card__inner">
-          <div class="product-card__img-box product-item--sale" >
+        <div class="product-card__img-box product-item--sale" >
             <!--<img src="images/content/gidrotsikl-large.png" alt="gidrotsikl">-->
+         
             <div class="images">
                 <div class="bigimage">
-                  <img class="product-card__img" src="images/content/gidrotsikl-large.png" alt="gidrotsikl-large">
+                  <img class="product-card__img" src="images/content/gidrotsikl-large.png" alt="gidrotsikl-large" itemprop="image">
                 </div>
+
               <div class="gallery">
                 <div>
                   <div class="rail">
@@ -196,21 +190,22 @@
             </div>
 
             <div class="offer">
-              <h3 itemprop="name">Гидроцикл BRP SeeDoo</h3>
-              <p class="product-card__price-old">1 200 475 ₽</p>
-              <p class=" product-card__price-new price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <h1  itemprop="name">Гидроцикл BRP</h1>
+              <!--<p class="product-card__price-old">1 200 475 ₽</p>-->
+              <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
               <span itemprop="price">1 100 475</span>
               <meta itemprop="priceCurrency" content="RUB">
               </p>
               <a class="product-card__link" href="#">Нашли дешевле? Снизим цену!</a>
             <div class=" product-card__btn product-card__btn-mobile">
-              <button type="button" class="product-card__btn btn btn-success btn-buy"><a href="order.html"><span>Купить</span></a></button>
+              <button type="button" class="product-card__btn btn btn-success btn-buy btn-danger"><a href="order.html"><span>Купить</span></a></button>
           </div>
         </div>
       </div>
+    </div>
 
         <div class="product-card__content offer">
-            <h1 class="product-card__title" itemprop="name">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
+            <h1 class="product-card__title">Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic</h1>
             <p class="product-card__code">Код товара: 366666-2</p>
           <div class="product-card__buttons">
             <a class="product-card__icon-favorite" href="#">
