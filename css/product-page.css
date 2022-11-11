@@ -7,7 +7,7 @@
   width: 500px;
   padding-top: 64px;
   text-align: center;
-  font-family: 'Montserrat', 'Roboto';
+  font-family: "Montserrat", "Roboto";
   position: relative;
 }
 
@@ -23,7 +23,7 @@
   font-size: 30px;
   line-height: 44px;
   opacity: 0.6;
-  background-image: url('../images/old-line.svg');
+  background-image: url("../images/old-line.svg");
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
@@ -51,7 +51,7 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
-  font-family: 'Montserrat', 'Roboto';
+  font-family: "Montserrat", "Roboto";
   margin-bottom: 10px;
 }
 
@@ -81,12 +81,11 @@
   padding-left: 17px;
 }
 
-
 .product-card__tab.tab--active {
   opacity: 1;
   border-bottom: 2px solid #0d85ee;
   font-weight: bold;
-  font-family: 'Montserrat', 'Roboto';
+  font-family: "Montserrat", "Roboto";
 }
 
 .product-card__item {
@@ -165,7 +164,7 @@
 .card__label-search {
   font-size: 17px;
   line-height: 20px;
-  color: rgba(47, 48, 53, .7);
+  color: rgba(47, 48, 53, 0.7);
   opacity: 0.7;
 }
 
@@ -182,7 +181,7 @@
   font-size: 17px;
   line-height: 20px;
   margin-left: 54px;
-  color: rgba(47, 48, 53, .7);
+  color: rgba(47, 48, 53, 0.7);
 }
 
 .card__label-pickup .jq-radio.checked .jq-radio__div {
@@ -195,7 +194,7 @@
   display: flex;
   font-size: 16px;
   line-height: 22px;
-  color: rgba(47, 48, 53, .7);
+  color: rgba(47, 48, 53, 0.7);
   opacity: 0.7;
 }
 
